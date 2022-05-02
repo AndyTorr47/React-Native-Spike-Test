@@ -1,22 +1,20 @@
-import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
-import SignInScreen from "./src/screens/SignInScreen";
+import { SafeAreaView, StyleSheet, Text } from "react-native";
+import SignUpScreen from "./src/screens/SignUpScreen";
 
-export default function App() {
+const App = () => {
   return (
-    <View style={styles.container}>
-      <SignInScreen />
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.root}>
+      <SignUpScreen />
+    </SafeAreaView>
   );
-}
+};
 
 const styles = StyleSheet.create({
-  container: {
+  root: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+    backgroundColor: "#F9FBFC",
   },
 });
+
+export default App;
